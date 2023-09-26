@@ -6,11 +6,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "animate.css";
 import { useEffect } from "react";
+import Skills from "./Skills";
 
 export default function Home() {
   useEffect(() => {
     AOS.init({
-      offset: 200,
+      offset: 120,
       throttleDelay: 200,
       debounceDelay: 200,
       // delay: 600,
@@ -25,6 +26,7 @@ export default function Home() {
       </div>
       <div className="marginSideWays">
         <About />
+        <Skills />
       </div>
     </>
   );

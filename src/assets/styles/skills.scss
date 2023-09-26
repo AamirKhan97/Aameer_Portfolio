@@ -1,0 +1,29 @@
+#skillsMain {
+  .headingTxt {
+    margin-bottom: 30px;
+    h1 {
+      width: 22%;
+      font-size: 60px;
+      cursor: pointer;
+      &:hover ~ .belowLine {
+        transition: all 0.5s ease;
+        width: 8%;
+      }
+      &:hover ~ .belowLine2 {
+        transition: all 0.5s ease;
+        width: 10%;
+      }
+    }
+    .belowLine {
+      border: 2px solid #000;
+      margin-bottom: 5px;
+      width: 10%;
+      transition: all 0.5s ease;
+    }
+    .belowLine2 {
+      border: 2px solid #000;
+      width: 8%;
+      transition: all 0.5s ease;
+    }
+  }
+}

@@ -1,11 +1,11 @@
 @import "styles.module.scss";
 
 #AboutMain {
-  // height: 100vh;
+  margin-bottom: 80px;
   .headingTxt {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     h1 {
-      width: 19%;
+      width: 22%;
       font-size: 60px;
       cursor: pointer;
       &:hover ~ .belowLine {
@@ -31,13 +31,13 @@
   }
   .aboutContent {
     .profileCard {
-      border-right: .5px solid #a9a6a6;
+      border-right: 0.5px solid #a9a6a6;
       position: relative;
       display: flex;
       justify-content: center;
       overflow: hidden;
       width: 100%;
-      height: calc(100vh - 100px);
+      height: calc(100vh - 180px);
     }
     .borderCard {
       position: absolute;
@@ -82,23 +82,94 @@
         margin-bottom: 30px;
         font-weight: 300;
       }
-      .flexBox{
-        display: flex;
-        // justify-content: space-between;
-        align-items: center;
-        margin-bottom: 30px;
-        // border-bottom: .5px solid #121212;
-        .key{
-          color: #000;
-          font-weight: 600;
-          font-size: 20px;
-          span{
-            margin-left: 5px;
+      .leftBox {
+        border-right: 0.5px solid #a9a6a6;
+        border-left: 0.5px solid #a9a6a6;
+        height: 250px;
+        .servicesBox {
+          p {
+            margin-left: 20px;
+            font-size: 30px;
+          }
+          .flexBox {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 20px;
+            // margin-right: 20px;
+            // align-items: center;
+            // text-align: center;
+            margin-bottom: 20px;
+            .key {
+              color: #000;
+              font-weight: 600;
+              font-size: 20px;
+              span {
+                margin-left: 5px;
+              }
+            }
+            .value {
+              font-size: 18px;
+              margin-left: 10px;
+              color: #a9a6a6;
+            }
           }
         }
-        .value{
-          font-size: 18px;
+      }
+      .rightBox {
+        height: 250px;
+        border-left: 0.5px solid #a9a6a6;
+        border-right: 0.5px solid #a9a6a6;
+        margin-bottom: 30px;
+        p {
+          font-size: 30px;
+          margin-left: 20px;
+        }
+        .flexBox {
+          display: flex;
+          margin-left: 20px;
+          margin-right: 20px;
+          align-items: center;
+          text-align: center;
+          margin-bottom: 20px;
+          .key {
+            color: #000;
+            font-weight: 600;
+            font-size: 20px;
+            span {
+              margin-left: 5px;
+            }
+          }
+          .value {
+            font-size: 18px;
+            margin-left: 10px;
+            color: #a9a6a6;
+            text-decoration: none;
+          }
+        }
+      }
+      .downloadBox {
+        border-top: 0.5px solid #a9a6a6;
+        text-align: end;
+        .downloadIcon {
           margin-left: 10px;
+        }
+        .downloadBtn {
+          border: 1px solid #000;
+          height: 42px;
+          width: 212px;
+          background-color: transparent;
+          margin-top: 20px;
+          border-radius: 12px;
+          font-size: 18px;
+          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+          transition: all 0.5s ease;
+          &:hover {
+            background-color: #121212;
+            color: #fff;
+            transition: all 0.5s ease;
+            box-shadow: 0 29px 52px rgba(0, 0, 0, 0.4),
+              0 25px 16px rgba(0, 0, 0, 0.2);
+          }
         }
       }
     }
