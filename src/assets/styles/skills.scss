@@ -1,29 +1,71 @@
 #skillsMain {
-  .headingTxt {
-    margin-bottom: 30px;
+  height: calc(100vh - 200px);
+  .contentBox {
+    position: relative;
+
     h1 {
       width: 22%;
       font-size: 60px;
       cursor: pointer;
-      &:hover ~ .belowLine {
+
+      &:hover~.belowLine {
         transition: all 0.5s ease;
         width: 8%;
       }
-      &:hover ~ .belowLine2 {
+
+      &:hover~.belowLine2 {
         transition: all 0.5s ease;
         width: 10%;
       }
     }
+
     .belowLine {
       border: 2px solid #000;
       margin-bottom: 5px;
       width: 10%;
       transition: all 0.5s ease;
     }
+
     .belowLine2 {
       border: 2px solid #000;
+      margin-bottom: 30px;
       width: 8%;
       transition: all 0.5s ease;
     }
+
+    .contentSlider {
+      .splide__arrow {
+        background: #000;
+        opacity: 1;
+
+        svg {
+          fill: #fff;
+        }
+      }
+
+      .splide__arrows--ltr {
+        .splide__arrow--prev {
+          position: absolute;
+          top: -5em;
+          left: auto;
+          right: 5em;
+        }
+
+        .splide__arrow--next {
+          position: absolute;
+          top: -5em;
+          right: 0em;
+        }
+      }
+
+      .skills1Box {
+        height: calc(100vh - 500px);
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
   }
+
 }

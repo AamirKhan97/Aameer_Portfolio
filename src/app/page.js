@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "animate.css";
+import '@splidejs/react-splide/css';
 import { useEffect } from "react";
 import Skills from "./Skills";
 

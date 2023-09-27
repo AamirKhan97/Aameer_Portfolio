@@ -76,7 +76,7 @@ const About = () => {
                           Address <span>:</span>
                         </label>
                         <label className="value">
-                          Aurangabad, Maharashtra (431001)
+                          Aurangabad, Maharashtra
                         </label>
                       </div>
                     </div>
