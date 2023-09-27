@@ -1,7 +1,7 @@
 // import Videop4 from "../../public/galaxy.mp4";
 import React from "react";
 import BrandImg from "../assets/images/AameerImgBlur.png";
-import snapImg from "../assets/images/AameerSnap.jpg";
+import BlurImg from "../assets/images/BlurImg.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -40,7 +40,7 @@ const Landing = () => {
                     <div className="emptyBox3"></div>
                     <div className="contentBox">
                       <Image
-                        src={BrandImg}
+                        src={BlurImg}
                         height="100%"
                         width="100%"
                         className="innerBrandImg"
