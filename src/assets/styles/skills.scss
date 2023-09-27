@@ -8,12 +8,12 @@
       font-size: 60px;
       cursor: pointer;
 
-      &:hover~.belowLine {
+      &:hover ~ .belowLine {
         transition: all 0.5s ease;
         width: 8%;
       }
 
-      &:hover~.belowLine2 {
+      &:hover ~ .belowLine2 {
         transition: all 0.5s ease;
         width: 10%;
       }
@@ -60,12 +60,12 @@
 
       .skills1Box {
         height: calc(100vh - 500px);
-        background-color: #000;
+        // background-color: #000;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         display: flex;
         justify-content: center;
         align-items: center;
       }
     }
   }
-
 }

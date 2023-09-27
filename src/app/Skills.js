@@ -1,12 +1,7 @@
 import React from "react";
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 const Skills = () => {
-  new Splide('.splide', {
-    autoScroll: {
-      speed: 2,
-    },
-  });
   return (
     <>
       <div id="skillsMain" data-aos="fade-up">
@@ -18,17 +13,21 @@ const Skills = () => {
               <div className="belowLine2"></div>
               <div className="contentSlider">
                 <Splide
-          
                   options={{
-                    type: 'loop',
-                    drag: 'free',
-                    focus: 'center',
+                    type: "loop",
+                    gap: "10px",
+                    drag: "free",
+                    arrows: false,
                     pagination: false,
-                    gap: '2rem',
-                    perPage: 3,
-                    autoScroll: Splide,
-                    speed : 2
+                    perPage: 4,
+                    autoScroll: {
+                      pauseOnHover: true,
+                      pauseOnFocus: false,
+                      rewind: false,
+                      speed: 2,
+                    },
                   }}
+                  extensions={{AutoScroll}}
                   aria-label="My Favorite Images"
                 >
                   <SplideSlide>
