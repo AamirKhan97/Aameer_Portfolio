@@ -25,7 +25,7 @@ const Navbar = () => {
           <Link href="#navbar" className="navbar-brand brandTxt">
             <Image src={Brand} width="100%" height="100%" />
           </Link>
-          {/* <div className="scrollAnimation">
+          <div className="scrollAnimation">
             <h5>
               Technologies I <span>Know</span>
             </h5>
@@ -45,7 +45,7 @@ const Navbar = () => {
               <Image src={express} height="100%" width="100%" />
               <Image src={mongoDb} height="100%" width="100%" />
             </div>
-          </div> */}
+          </div>
           <div className="navLinks">
             <Link href="#AboutMain">About</Link>
             <Link href="#">Skills</Link>
