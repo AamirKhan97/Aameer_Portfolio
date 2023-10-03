@@ -8,6 +8,7 @@ import "animate.css";
 import '@splidejs/react-splide/css';
 import { useEffect } from "react";
 import Skills from "./Skills";
+import Projects from "./Projects";
 
 export default function Home() {
   useEffect(() => {
@@ -28,6 +29,7 @@ export default function Home() {
       <div className="marginSideWays">
         <About />
         <Skills />
+        <Projects/>
       </div>
     </>
   );

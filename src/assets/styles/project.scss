@@ -1,0 +1,84 @@
+#Projects {
+  height: calc(100vh - 200px);
+  .contentBox {
+    position: relative;
+
+    h1 {
+      width: 22%;
+      font-size: 60px;
+      cursor: pointer;
+
+      &:hover ~ .belowLine {
+        transition: all 0.5s ease;
+        width: 13%;
+      }
+
+      &:hover ~ .belowLine2 {
+        transition: all 0.5s ease;
+        width: 16%;
+      }
+    }
+
+    .belowLine {
+      border: 2px solid #000;
+      margin-bottom: 5px;
+      width: 16%;
+      transition: all 0.5s ease;
+    }
+
+    .belowLine2 {
+      border: 2px solid #000;
+      margin-bottom: 30px;
+      width: 13%;
+      transition: all 0.5s ease;
+    }
+  }
+  .contentSlider {
+    // border: .5px solid #a9a6a6;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+    .splide__arrow {
+      background: #000;
+      opacity: 1;
+
+      svg {
+        fill: #fff;
+      }
+    }
+
+    .splide__arrows--ltr {
+      .splide__arrow--prev {
+        position: absolute;
+        top: -5em;
+        left: auto;
+        right: 5em;
+      }
+
+      .splide__arrow--next {
+        position: absolute;
+        top: -5em;
+        right: 0em;
+      }
+    }
+
+    .htmlBox {
+      height: 300px;
+      width: 100%;
+      // background: rgba($color: #000000, $alpha: 0.7);
+      border-radius: 20px;
+      background-color: #000;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .technoImg {
+        height: 200px;
+        width: 250px;
+      }
+    }
+  }
+}

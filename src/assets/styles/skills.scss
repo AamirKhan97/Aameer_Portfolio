@@ -1,5 +1,5 @@
 #skillsMain {
-  height: calc(100vh - 200px);
+  height: calc(100vh - 100px);
 
   .contentBox {
     position: relative;
@@ -9,12 +9,12 @@
       font-size: 60px;
       cursor: pointer;
 
-      &:hover~.belowLine {
+      &:hover ~ .belowLine {
         transition: all 0.5s ease;
         width: 8%;
       }
 
-      &:hover~.belowLine2 {
+      &:hover ~ .belowLine2 {
         transition: all 0.5s ease;
         width: 10%;
       }
@@ -34,52 +34,215 @@
       transition: all 0.5s ease;
     }
 
-    .contentSlider {
-      // border: .5px solid #a9a6a6;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-
-      .splide__arrow {
-        background: #000;
-        opacity: 1;
-
-        svg {
-          fill: #fff;
-        }
-      }
-
-      .splide__arrows--ltr {
-        .splide__arrow--prev {
-          position: absolute;
-          top: -5em;
-          left: auto;
-          right: 5em;
-        }
-
-        .splide__arrow--next {
-          position: absolute;
-          top: -5em;
-          right: 0em;
-        }
-      }
-
-      .htmlBox {
-        height: 300px;
-        width: 100%;
-        // background: rgba($color: #000000, $alpha: 0.7);
-        border-radius: 20px;
-        // background-color: #000;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    .flexBox {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 30px;
+      .totalProfCircle {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-
-        .technoImg {
-          height: 200px;
-          width: 250px;
+        border: 3px dashed #000;
+        animation: circleShadow 3s infinite alternate 0.5s;
+        .innerColorBlack {
+          background-color: #000;
+          height: 32px;
+          width: 32px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .insiderWhite {
+            color: #fff;
+            font-size: 12px;
+            font-weight: bold;
+          }
         }
       }
     }
+    .stepperBox {
+      width: 100%;
+      position: relative;
+      .firstCircleBor {
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: circleShadow 3s infinite alternate 0.5s;
+        .innerColorBlack {
+          background-color: #000;
+          height: 29px;
+          width: 29px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .insiderWhite {
+            color: #fff;
+            font-size: 12px;
+            font-weight: bold;
+          }
+        }
+      }
+      .roundedRotate1 {
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        border: 3px dashed #000;
+        border-radius: 50%;
+        animation: rotateAuto 5s linear infinite;
+      }
+      .line1 {
+        position: absolute;
+        left: 42px;
+        border: 3px solid #000;
+        width: 100px;
+        // height: 5px;
+      }
+      .secondCircleBor {
+        position: absolute;
+        left: 145px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: circleShadow 3s infinite alternate 1s;
+        .innerColorBlack {
+          background-color: #000;
+          height: 29px;
+          width: 29px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .insiderWhite {
+            color: #fff;
+            font-size: 12px;
+            font-weight: bold;
+          }
+        }
+      }
+      .roundedRotate2 {
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        border: 3px dashed #000;
+        border-radius: 50%;
+        animation: rotateAuto 5s linear infinite;
+      }
+      .line2 {
+        position: absolute;
+        left: 43px;
+        border: 3px solid #000;
+        width: 100px;
+        // height: 5px;
+      }
+      .thirdCircleBor {
+        position: absolute;
+        left: 291px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: circleShadow 3s infinite alternate 1.5s;
+        .innerColorBlack {
+          background-color: #000;
+          height: 29px;
+          width: 29px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .insiderWhite {
+            color: #fff;
+            font-size: 12px;
+            font-weight: bold;
+          }
+        }
+      }
+      .roundedRotate3 {
+        position: absolute;
+        left: 291px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 3px dashed #000;
+        animation: rotateAuto 5s linear infinite;
+      }
+      .line3 {
+        position: absolute;
+        left: 43px;
+        border: 3px solid #000;
+        width: 100px;
+        // height: 5px;
+      }
+      .fouthCircleBor {
+        position: absolute;
+        left: 437px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: circleShadow 3s infinite alternate 1.5s;
+        .innerColorBlack {
+          background-color: #000;
+          height: 29px;
+          width: 29px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .insiderWhite {
+            color: #fff;
+            font-size: 11px;
+            font-weight: bold;
+          }
+        }
+      }
+      .roundedRotate4 {
+        position: absolute;
+        left: 437px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 3px dashed #000;
+        animation: rotateAuto 5s linear infinite;
+      }
+    }
+  }
+}
+
+@keyframes circleShadow {
+  0% {
+    box-shadow: 0 0 5px rgba(83, 82, 82, 09);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  }
+}
+
+@keyframes rotateAuto {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
