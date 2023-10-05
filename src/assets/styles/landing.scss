@@ -1,8 +1,10 @@
 @import "./styles.module.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&family=Roboto+Slab&display=swap");
+
 * {
   font-family: "roboto", sans-serif;
 }
+
 .mainRoot {
   padding: 20px;
   height: calc(100vh - 40px);
@@ -63,6 +65,7 @@
             border: 0.5px solid #fff;
             border-radius: 12px;
             transition: all 0.5s ease-out;
+
             &:hover {
               background-color: #fff;
               color: #000;
@@ -83,12 +86,12 @@
         width: 100%;
 
         .emptyBox1 {
-          height: 150px;
-          width: 150px;
+          height: 12rem;
+          width: 12rem;
           border: 4px solid #fff;
           border-radius: 12px;
           position: absolute;
-          top: 50px;
+          top: 7rem;
           left: -70px;
           animation: shadow-animation 3s ease infinite;
           background-color: #121212;
@@ -111,12 +114,12 @@
         }
 
         .emptyBox2 {
-          height: 150px;
-          width: 150px;
+          height: 12rem;
+          width: 12rem;
           border: 5px solid #fff;
           border-radius: 12px;
           position: absolute;
-          top: 350px;
+          top: 35rem;
           left: 40px;
           transform: rotate(47deg);
           // animation: rotateMain 5s linear infinite;
@@ -125,12 +128,12 @@
         }
 
         .emptyBox3 {
-          height: 200px;
-          width: 280px;
+          height: 20rem;
+          width: 30rem;
           border: 5px solid #fff;
           border-radius: 12px;
           position: absolute;
-          top: 180px;
+          top: 18rem;
           left: 70px;
           // animation: shadow-animation 3s linear infinite;
           box-shadow: 25px 0 20px -20px rgba(255, 254, 254, 0.45),
@@ -138,10 +141,10 @@
         }
 
         .contentBox {
-          height: 350px;
-          width: 250px;
+          height: 35rem;
+          width: 25rem;
           position: absolute;
-          top: 95px;
+          top: 10rem;
           left: 45px;
           cursor: pointer;
 
@@ -157,6 +160,7 @@
     }
   }
 }
+
 .marginSideWays {
   margin: 0px 80px 80px;
 }
