@@ -1,7 +1,7 @@
 @import "styles.module.scss";
 
 #AboutMain {
-  margin-bottom: 80px;
+  margin: 30px 0px 80px 0px;
   .headingTxt {
     margin-bottom: 10px;
     h1 {
@@ -9,6 +9,10 @@
       font-size: 60px;
       cursor: pointer;
       &:hover ~ .belowLine {
+        transition: all 0.5s ease;
+        width: 12%;
+      }
+      &:hover ~ .belowLineDark {
         transition: all 0.5s ease;
         width: 12%;
       }
@@ -23,15 +27,21 @@
       width: 18%;
       transition: all 0.5s ease;
     }
+    .belowLineDark {
+      border: 2px solid #fff;
+      margin-bottom: 5px;
+      width: 18%;
+      transition: all 0.5s ease;
+    }
     .belowLine2 {
-      border: 2px solid #000;
+      border: 2px solid #00ffbc;
       width: 12%;
       transition: all 0.5s ease;
     }
   }
   .aboutContent {
     .profileCard {
-      border-right: 0.5px solid #a9a6a6;
+      border-right: 0.5px solid #00ffbc;
       position: relative;
       display: flex;
       justify-content: center;
@@ -41,11 +51,12 @@
     }
     .borderCard {
       position: absolute;
-      top: 130px;
+      top: 150px;
       left: 10px;
       width: 250px;
       height: 350px;
-      background-color: #121212;
+      background-color: #00ffbc;
+      // opacity: .7;
       border-radius: 12px;
       transition: all 0.5s ease;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -77,14 +88,20 @@
         color: grey;
         font-size: 25px;
         text-align: justify;
-        border-bottom: 0.5px solid #a9a6a6;
+        border-bottom: 0.5px solid #00ffbc;
         padding-bottom: 10px;
         margin-bottom: 30px;
         font-weight: 300;
+        .textDark {
+          color: #000;
+        }
+        .textlight {
+          color: #fff;
+        }
       }
       .leftBox {
-        border-right: 0.5px solid #a9a6a6;
-        border-left: 0.5px solid #a9a6a6;
+        border-right: 0.5px solid #00ffbc;
+        border-left: 0.5px solid #00ffbc;
         height: 250px;
         .servicesBox {
           p {
@@ -107,6 +124,14 @@
                 margin-left: 5px;
               }
             }
+            .keyDark {
+              color: #fff;
+              font-weight: 600;
+              font-size: 20px;
+              span {
+                margin-left: 5px;
+              }
+            }
             .value {
               font-size: 18px;
               margin-left: 10px;
@@ -117,8 +142,8 @@
       }
       .rightBox {
         height: 250px;
-        border-left: 0.5px solid #a9a6a6;
-        border-right: 0.5px solid #a9a6a6;
+        border-left: 0.5px solid #00ffbc;
+        border-right: 0.5px solid #00ffbc;
         margin-bottom: 30px;
         p {
           font-size: 30px;
@@ -139,6 +164,14 @@
               margin-left: 5px;
             }
           }
+          .keyDark {
+            color: #fff;
+            font-weight: 600;
+            font-size: 20px;
+            span {
+              margin-left: 5px;
+            }
+          }
           .value {
             font-size: 18px;
             margin-left: 10px;
@@ -148,13 +181,13 @@
         }
       }
       .downloadBox {
-        border-top: 0.5px solid #a9a6a6;
+        border-top: 0.5px solid #00ffbc;
         text-align: end;
         .downloadIcon {
           margin-left: 10px;
         }
         .downloadBtn {
-          border: 1px solid #000;
+          border: 2px solid #00ffbc;
           height: 42px;
           width: 212px;
           background-color: transparent;
@@ -169,6 +202,31 @@
             transition: all 0.5s ease;
             box-shadow: 0 29px 52px rgba(0, 0, 0, 0.4),
               0 25px 16px rgba(0, 0, 0, 0.2);
+          }
+          &:hover .downloadIcon {
+            color: #00ffbc !important;
+          }
+        }
+        .downloadBtnDark {
+          border: 2px solid #00ffbc;
+          color: #fff;
+          height: 42px;
+          width: 212px;
+          background-color: transparent;
+          margin-top: 20px;
+          border-radius: 12px;
+          font-size: 18px;
+          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+          transition: all 0.5s ease;
+          &:hover {
+            background-color: #121212;
+            color: #00ffbc;
+            transition: all 0.5s ease;
+            box-shadow: 0 5px 5px #00ffbc,
+              0 5px 2px rgba(219, 216, 216, 0.2);
+          }
+          &:hover .downloadIcon {
+            color: #00ffbc !important;
           }
         }
       }

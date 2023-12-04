@@ -1,29 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Brand from "../assets/images/brandLogo.svg";
-import html from "../assets/images/html.svg";
-import css from "../assets/images/css.svg";
-import bootstrap from "../assets/images/bootstrap.svg";
-import javascript from "../assets/images/javascript.svg";
-import uiux from "../assets/images/uiux.svg";
-import react from "../assets/images/react.svg";
-import next from "../assets/images/next.svg";
-import rBoot from "../assets/images/rBoot.svg";
-import primeReact from "../assets/images/primeReact.svg";
-import antDesi from "../assets/images/antDesi.svg";
-import materialui from "../assets/images/material-ui.svg";
-import Node from "../assets/images/Node.svg";
-import express from "../assets/images/express.svg";
-import mongoDb from "../assets/images/mongoDb.svg";
+import { ThemeContext } from "@/context/ThemeContext";
+import { useContext } from "react";
+import Orbit from "../assets/images/orbit.svg";
+import Sun from "../assets/images/sun.svg";
+import Moon from "../assets/images/sun-moon.svg";
 
 const Navbar = () => {
+  const { switchDark, switchLight, theme } = useContext(ThemeContext);
+  const [clicked, setClicked] = useState(false);
+
   return (
     <>
-      <nav className="navbar sticky-top" id="navbar">
+      <nav
+        className="navbar sticky-top"
+        id={theme === "light" ? "navbar" : "navbardarkT"}
+      >
         <div className="mainNav">
-          <Link href="#navbar" className="navbar-brand brandTxt">
-            <Image src={Brand} width="100%" height="100%" />
+          <Link href="/" className="navbar-brand brandTxt">
+            <Image alt="" src={Brand} width="auto" height="45" />
           </Link>
           {/* <div className="scrollAnimation">
             <h5>
@@ -46,11 +43,30 @@ const Navbar = () => {
               <Image src={mongoDb} height="100%" width="100%" />
             </div>
           </div> */}
+          {/* <div className="themeMode"></div> */}
           <div className="navLinks">
-            <Link href="#AboutMain">About</Link>
-            <Link href="#">Skills</Link>
-            <Link href="#">Projects</Link>
-            <Link href="#">Education</Link>
+            {clicked ? (
+              <button
+                onClick={theme === "light" ? switchDark : switchLight}
+                className={theme === "light" ? "themeLight" : "themeDark"}
+              >
+                <Image alt="" src={theme === "light" ? Moon : Sun} />
+              </button>
+            ) : (
+              <>
+                <Link href="#AboutMain">About</Link>
+                <Link href="#skillsMain">Skills</Link>
+                <Link href="#Projects">Projects</Link>
+              </>
+            )}
+            <Image
+              alt=""
+              src={Orbit}
+              height="25"
+              width="25"
+              style={{ cursor: "pointer" }}
+              onClick={() => setClicked(!clicked)}
+            />
           </div>
         </div>
       </nav>

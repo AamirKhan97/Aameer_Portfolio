@@ -1,14 +1,18 @@
-// import Videop4 from "../../public/galaxy.mp4";
-import React from "react";
-import BrandImg from "../assets/images/AameerImgBlur.png";
+import React, { useContext } from "react";
 import BlurImg from "../assets/images/BlurImg.png";
 import Image from "next/image";
 import Link from "next/link";
+import { ThemeContext } from "@/context/ThemeContext";
 
 const Landing = () => {
+  const { theme, setTheme } = useContext(ThemeContext);
   return (
     <>
-      <div className="landingDiv" id="IntroSpace">
+      <div></div>
+      <div
+        className={theme === "light" ? "landingDiv" : "landingDivDark"}
+        id="IntroSpace"
+      >
         <div className="row g-0">
           <div className="col-md-7">
             <div className="contentCard">
@@ -18,7 +22,7 @@ const Landing = () => {
                 </h1>
                 <p className="animate__animated animate__slideInUp">
                   {" "}
-                  <span> Front-end developer </span>with a passion for creating
+                  <span> Front-end Developer </span>with a passion for creating
                   responsive and visually appealing web interfaces. Proficient
                   in HTML, CSS, and JavaScript, I specialize in crafting
                   engaging user experiences that drive user satisfaction and
@@ -40,6 +44,7 @@ const Landing = () => {
                     <div className="emptyBox3"></div>
                     <div className="contentBox">
                       <Image
+                        alt=""
                         src={BlurImg}
                         height="100%"
                         width="100%"

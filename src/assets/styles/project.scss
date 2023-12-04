@@ -12,7 +12,10 @@
         transition: all 0.5s ease;
         width: 13%;
       }
-
+      &:hover ~ .belowLineDark {
+        transition: all 0.5s ease;
+        width: 13%;
+      }
       &:hover ~ .belowLine2 {
         transition: all 0.5s ease;
         width: 16%;
@@ -25,9 +28,14 @@
       width: 16%;
       transition: all 0.5s ease;
     }
-
+    .belowLineDark {
+      border: 2px solid #fff;
+      margin-bottom: 5px;
+      width: 16%;
+      transition: all 0.5s ease;
+    }
     .belowLine2 {
-      border: 2px solid #000;
+      border: 2px solid #00ffbc;
       margin-bottom: 30px;
       width: 13%;
       transition: all 0.5s ease;
@@ -35,11 +43,13 @@
   }
   .contentSlider {
     // border: .5px solid #a9a6a6;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-
+    // padding: 15px;
+    // border-radius: 12px;
+    // box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    //   rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    .splide__track {
+      padding: 20px 0px;
+    }
     .splide__arrow {
       background: #000;
       opacity: 1;
@@ -65,19 +75,143 @@
     }
 
     .htmlBox {
+      cursor: pointer;
       height: 300px;
       width: 100%;
-      // background: rgba($color: #000000, $alpha: 0.7);
+      background: linear-gradient(180deg, #edf3d6, #eed3e9);
       border-radius: 20px;
-      background-color: #000;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       display: flex;
       justify-content: center;
       align-items: center;
-
+      transition: all 0.5s ease-in;
+      &:hover {
+        box-shadow: #f0bfe7 0px 7px 20px 0px;
+        transition: all 0.5s ease-in;
+      }
       .technoImg {
-        height: 200px;
-        width: 250px;
+        height: 150px;
+        width: 150px;
+      }
+    }
+    .EdsysBox {
+      cursor: pointer;
+      height: 300px;
+      width: 100%;
+      background: linear-gradient(50deg, #9cb6ff, #1e44eb);
+      border-radius: 20px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.5s ease-in;
+      &:hover {
+        box-shadow: #1e44eb 0px 7px 20px 0px;
+        transition: all 0.5s ease-in;
+      }
+      .technoImg {
+        height: 150px;
+        width: 150px;
+      }
+    }
+    .vehicleBox {
+      cursor: pointer;
+      height: 300px;
+      width: 100%;
+      background: linear-gradient(50deg, #fff, rgb(224, 144, 69));
+      border-radius: 20px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.5s ease-in;
+      &:hover {
+        box-shadow: rgb(224, 144, 69) 0px 7px 20px 0px;
+        transition: all 0.5s ease-in;
+      }
+      .technoImgV {
+        height: 150px;
+        width: 200px;
+      }
+    }
+    .CloudBox {
+      cursor: pointer;
+      height: 300px;
+      width: 100%;
+      background: linear-gradient(45deg, #fff, rgb(86, 131, 230));
+      border-radius: 20px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.5s ease-in;
+      &:hover {
+        box-shadow: rgb(86, 131, 230) 0px 7px 20px 0px;
+        transition: all 0.5s ease-in;
+      }
+      .technoImg {
+        height: 150px;
+        width: 150px;
+      }
+    }
+    .fleetBox {
+      cursor: pointer;
+      height: 300px;
+      width: 100%;
+      background: linear-gradient(50deg, #ec8e3c, #fff);
+      border-radius: 20px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.5s ease-in;
+      &:hover {
+        box-shadow: #ec8e3c 0px 7px 20px 0px;
+        transition: all 0.5s ease-in;
+      }
+      .technoImg {
+        height: 150px;
+        width: 200px;
+      }
+    }
+    .CostBox {
+      cursor: pointer;
+      height: 300px;
+      width: 100%;
+      background: linear-gradient(240deg, #fff, rgb(239, 30, 30));
+      border-radius: 20px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.5s ease-in;
+      &:hover {
+        box-shadow: rgb(239, 30, 30) 0px 7px 20px 0px;
+        transition: all 0.5s ease-in;
+      }
+      .technoImgC {
+        height: auto;
+        width: 100%;
+      }
+    }
+    .customerBox {
+      cursor: pointer;
+      height: 300px;
+      width: 100%;
+      background: linear-gradient(240deg, #fff, #1d7c7c);
+      border-radius: 20px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.5s ease-in;
+      &:hover {
+        box-shadow: #1d7c7c 0px 7px 20px 0px;
+        transition: all 0.5s ease-in;
+      }
+      .technoImgC {
+        height: 150px;
+        width: 200px;
       }
     }
   }

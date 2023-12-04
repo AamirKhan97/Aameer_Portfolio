@@ -1,23 +1,36 @@
-import React from "react";
+import React, { useContext } from "react";
 import cardImg from "../assets/images/AameerSnap.jpg";
+import aboutCard from "../assets/images/aboutCard.svg";
 import Image from "next/image";
+import { ThemeContext } from "@/context/ThemeContext";
 
 const About = () => {
+  const { theme, setTheme } = useContext(ThemeContext);
+
   return (
     <>
       <div id="AboutMain" data-aos="fade-up">
         <div className="headingTxt">
           <h1>About Me</h1>
-          <div className="belowLine"></div>
+          <div
+            className={theme === "light" ? "belowLine" : "belowLineDark"}
+          ></div>
           <div className="belowLine2"></div>
         </div>
         <div className="aboutContent">
           <div className="row">
             <div className="col-md-4">
               <div className="profileCard">
+                {/* <Image
+                  src={aboutCard}
+                  height="100%"
+                  width="100%"
+                  className="borderCard"
+                /> */}
                 <div className="borderCard"></div>
                 <div className="imageHolder">
                   <Image
+                    alt=""
                     src={cardImg}
                     height="100%"
                     width="100%"
@@ -29,26 +42,36 @@ const About = () => {
             <div className="col-md-8">
               <div className="headingDetails">
                 <h1>
-                  I am a Front-end developer with over two years of hands-on
-                  experience specializing in crafting exceptional user
-                  interfaces and experiences. My passion lies in front-end
-                  development, where I excel in creating intuitive and visually
-                  appealing web applications. My expertise primarily revolves
-                  around React.js and Next.js, Ui / Ux allowing me to deliver
-                  high-performance and responsive solutions.
+                  I am a{" "}
+                  {theme === "light" ? (
+                    <span className="textDark"> Front-end Developer</span>
+                  ) : (
+                    <span className="textlight"> Front-end Developer</span>
+                  )}{" "}
+                  with over two years of hands-on experience specializing in
+                  crafting exceptional user interfaces and experiences. My
+                  passion lies in front-end development, where I excel in
+                  creating intuitive and visually appealing web applications. My
+                  expertise primarily revolves around React.js and Next.js, Ui /
+                  Ux allowing me to deliver high-performance and responsive
+                  solutions.
                 </h1>
                 <div className="row">
                   <div className="col-md-6">
                     <div className="rightBox">
                       <p>Personal Info</p>
                       <div className="flexBox">
-                        <label className="key">
+                        <label
+                          className={theme === "light" ? "key" : "keyDark"}
+                        >
                           Name <span>:</span>
                         </label>
                         <label className="value">Aameer Ayub Khan</label>
                       </div>
                       <div className="flexBox">
-                        <label className="key">
+                        <label
+                          className={theme === "light" ? "key" : "keyDark"}
+                        >
                           Email <span>:</span>
                         </label>
                         <a
@@ -60,7 +83,9 @@ const About = () => {
                         </a>
                       </div>
                       <div className="flexBox">
-                        <label className="key">
+                        <label
+                          className={theme === "light" ? "key" : "keyDark"}
+                        >
                           Phone <span>:</span>
                         </label>
                         <a
@@ -72,12 +97,12 @@ const About = () => {
                         </a>
                       </div>
                       <div className="flexBox">
-                        <label className="key">
+                        <label
+                          className={theme === "light" ? "key" : "keyDark"}
+                        >
                           Address <span>:</span>
                         </label>
-                        <label className="value">
-                          Aurangabad, Maharashtra
-                        </label>
+                        <label className="value">Aurangabad, Maharashtra</label>
                       </div>
                     </div>
                   </div>
@@ -86,7 +111,9 @@ const About = () => {
                       <div className="servicesBox">
                         <p>Education</p>
                         <div className="flexBox">
-                          <label className="key">
+                          <label
+                            className={theme === "light" ? "key" : "keyDark"}
+                          >
                             SSC <span>:</span>
                           </label>
                           <label className="value">
@@ -94,7 +121,9 @@ const About = () => {
                           </label>
                         </div>
                         <div className="flexBox">
-                          <label className="key">
+                          <label
+                            className={theme === "light" ? "key" : "keyDark"}
+                          >
                             HSC <span>:</span>
                           </label>
                           <label className="value">
@@ -102,7 +131,9 @@ const About = () => {
                           </label>
                         </div>
                         <div className="flexBox">
-                          <label className="key">
+                          <label
+                            className={theme === "light" ? "key" : "keyDark"}
+                          >
                             Bachelor's <span>:</span>
                           </label>
                           <label className="value">
@@ -110,7 +141,9 @@ const About = () => {
                           </label>
                         </div>
                         <div className="flexBox">
-                          <label className="key">
+                          <label
+                            className={theme === "light" ? "key" : "keyDark"}
+                          >
                             Web Development <span>:</span>
                           </label>
                           <label className="value">Youtube (Ui Brains)</label>
@@ -121,14 +154,20 @@ const About = () => {
                   <div className="col-md-12">
                     <div className="downloadBox">
                       <a download href="/Aameer_cv.pdf">
-                        <button className="downloadBtn">
+                        <button
+                          className={
+                            theme === "light"
+                              ? "downloadBtn"
+                              : "downloadBtnDark"
+                          }
+                        >
                           Download Cv
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="20"
                             height="20"
                             fill="currentColor"
-                            class="bi bi-cloud-arrow-down-fill"
+                            className="bi bi-cloud-arrow-down-fill"
                             viewBox="0 0 16 16"
                             className="downloadIcon"
                           >

@@ -1,90 +1,194 @@
 @import "./styles.module.scss";
 
 #navbar {
-    background: #000;
+  background: #000;
+  transition: all 0.2s ease;
 
-    .mainNav {
-        width: 100%;
-        padding: 0px 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .brandTxt {
-            width: 30%;
-        }
-
-        .scrollAnimation {
-            border: 2px dashed #fff;
-            padding: 2px 10px;
-            border-radius: 12px;
-            width: 40%;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            overflow: hidden;
-
-            h5 {
-                margin-bottom: 0px !important;
-                font-size: 12px;
-                border-bottom: .5px solid #fff;
-                padding-bottom: 2px;
-
-                span {
-                    color: yellowgreen;
-                }
-            }
-
-            @keyframes scroll-right {
-                0% {
-                    transform: translateX(0);
-                }
-
-                100% {
-                    transform: translateX(-300%);
-                    animation-delay: 3000s;
-                }
-            }
-
-
-            .belowAnimate {
-                width: 100%;
-                display: flex;
-                animation: scroll-right 15s linear infinite;
-
-                Image {
-                    // margin-right: 10px;
-                }
-            }
-        }
-
-        .navLinks {
-            width: 30%;
-            display: flex;
-            justify-content: end;
-
-            // justify-content: space-between;
-            a {
-                color: #fff;
-                font-size: 16px;
-                font-weight: 600;
-                text-decoration: none;
-                margin-right: 10px;
-                border-right: 1px solid #fff;
-                // transition: all .5s;
-                padding-right: 10px;
-                border-bottom: 1px solid #000;
-                transition: all .5s ease;
-
-                &:hover {
-                    border-bottom: 1px solid #fff;
-                    border-right: 1px solid #000;
-                    transition: all .5s ease;
-                }
-            }
-        }
+  .mainNav {
+    width: 100%;
+    padding: 0px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .brandTxt {
+      width: 30%;
     }
+  }
+  .scrollAnimation {
+    border: 2px dashed #fff;
+    padding: 2px 10px;
+    border-radius: 12px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    overflow: hidden;
+
+    h5 {
+      margin-bottom: 0px !important;
+      font-size: 12px;
+      border-bottom: 0.5px solid #fff;
+      padding-bottom: 2px;
+
+      span {
+        color: yellowgreen;
+      }
+    }
+
+    @keyframes scroll-right {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-300%);
+        animation-delay: 3000s;
+      }
+    }
+
+    .belowAnimate {
+      width: 100%;
+      display: flex;
+      animation: scroll-right 15s linear infinite;
+
+      Image {
+        // margin-right: 10px;
+      }
+    }
+  }
+
+  .navLinks {
+    width: 30%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    // justify-content: space-between;
+    a {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-right: 10px;
+      border-right: 1px solid #fff;
+      // transition: all .5s;
+      padding-right: 10px;
+      border-bottom: 1px solid #000;
+      transition: all 0.5s ease;
+
+      &:hover {
+        border-bottom: 1px solid #fff;
+        border-right: 1px solid #000;
+        transition: all 0.5s ease;
+      }
+    }
+    .themeLight {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      border: none;
+      margin-right: 15px;
+      background: linear-gradient(45deg, #000, #fff);
+    }
+  }
+}
+
+#navbardarkT {
+  border-bottom: 1px solid #00ffbc;
+  transition: all 0.2s ease;
+  background-color: #000;
+  .mainNav {
+    width: 100%;
+    padding: 0px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .brandTxt {
+      width: 30%;
+    }
+    .scrollAnimation {
+      border: 2px dashed #fff;
+      padding: 2px 10px;
+      border-radius: 12px;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      overflow: hidden;
+
+      h5 {
+        margin-bottom: 0px !important;
+        font-size: 12px;
+        border-bottom: 0.5px solid #fff;
+        padding-bottom: 2px;
+
+        span {
+          color: yellowgreen;
+        }
+      }
+
+      @keyframes scroll-right {
+        0% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(-300%);
+          animation-delay: 3000s;
+        }
+      }
+
+      .belowAnimate {
+        width: 100%;
+        display: flex;
+        animation: scroll-right 15s linear infinite;
+
+        Image {
+          // margin-right: 10px;
+        }
+      }
+    }
+
+    .navLinks {
+      width: 30%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+
+      // justify-content: space-between;
+      a {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+        margin-right: 10px;
+        border-right: 1px solid #fff;
+        // transition: all .5s;
+        padding-right: 10px;
+        border-bottom: 1px solid #000;
+        transition: all 0.5s ease;
+
+        &:hover {
+          border-bottom: 1px solid #fff;
+          border-right: 1px solid #000;
+          transition: all 0.5s ease;
+        }
+      }
+      .themeDark {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 15px;
+        background: linear-gradient(45deg, grey, rgb(229, 130, 25));
+      }
+    }
+  }
 }
